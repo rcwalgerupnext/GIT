@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <title></title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <script>
+        $.ajax({
+             url: 'https://www.google.com.br',
+             type: 'GET',
+             success: function(res) {
+                 var headline = $(res.responseText).text();
+                 $("#cabecalho").html(headline);
+             }
+        });
+    </script>
+    <div id="cabecalho">
+
+    </div> 
+</body>
